@@ -307,6 +307,6 @@ Released under the [MIT License](LICENSE). See `LICENSE` for details.
 **Cosmo Nibblers** · Team ID `VTU-QFF-HC-0196` · Tier `Online`
 · Built with ⚛️ Qiskit for the VTU-QFF Hackathon
 
-[⬆ Back to Top](#Cosmo Nibblers)
+[⬆ Back to Top](#cosmo-nibblers)
 
 </div>
