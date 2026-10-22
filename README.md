@@ -61,31 +61,22 @@ Optional: add a plain list instead of the table above.
 ## ❓ Problem Statement
 
 <!--
-State the problem you are solving. Be specific: what is broken or missing,
-who experiences it, and why does it matter. Link to the official problem
-statement from the brief if one applies.
+Modern CI/CD pipelines frequently experience build, testing, deployment, and security failures that require substantial manual effort to diagnose and resolve. Conventional AI-based approaches can identify likely root causes and suggest fixes, but selecting the most appropriate recovery action from multiple candidates remains challenging.
 -->
 
-**Problem:** _Describe the problem in 2–3 sentences._
 
-**Why it matters:** _Explain the impact or opportunity._
-
-**Track / Category:** _Online / Offline · Track 1 / Track 2 · <domain>_
 
 ---
 
 ## 💡 Proposed Solution
 
-<!--
-Describe your solution. Keep it concrete: the core idea, the user flow, and
-the quantum/ML technique you are applying.
--->
 
-**Solution:** _In 2–3 sentences, describe what you built._
 
-**Key idea:** _The one-line technical summary of your approach._
+**Solution:** _Q-AutoCure extends the existing AutoCure autonomous DevOps healing platform with an experimental hybrid quantum-classical optimization module. The existing AI agents analyze pipeline failures and generate candidate recovery actions, while a quantum-assisted optimization approach will be explored to rank these candidates. The system will be evaluated against a classical baseline to measure its effectiveness._
 
-**Why this works:** _How your approach addresses the problem statement._
+**Key idea:** _Combine AI-driven failure analysis and automated DevOps recovery with quantum-assisted optimization of candidate repair actions._
+
+**Why this works:** _The project explores how quantum computing and AI/ML could work together to support intelligent failure recovery, reduce manual debugging effort, and improve the systematic evaluation of candidate fixes._
 
 ---
 
@@ -96,18 +87,26 @@ Walk through how it works. A simple pipeline diagram in text or Mermaid is ideal
 -->
 
 ```mermaid
-flowchart LR
-    A[Input Data] --> B[Preprocessing]
-    B --> C[Quantum Circuit / Model]
-    C --> D[Post-processing]
-    D --> E[Output]
+flowchart TD
+    step1["<b>1. CI/CD logs and test failures</b>"]
+    step2["<b>2. AutoCure AI agents</b><br/><span style='font-size:0.85em;color:#666;'>Failure classification and candidate fix generation</span>"]
+    step3["<b>3. Hybrid optimization layer</b><br/><span style='font-size:0.85em;color:#666;'>Classical baseline and Qiskit-based quantum-assisted experiment</span>"]
+    step4["<b>4. Recovery recommendation and validation</b><br/><span style='font-size:0.85em;color:#666;'>Ranked actions, test results, and dashboard output</span>"]
+
+    step1 --> step2
+    step2 --> step3
+    step3 --> step4
+
+    style step1 fill:#ffffff,stroke:#d1d5db,stroke-width:1.5px,rx:8px,ry:8px
+    style step2 fill:#ffffff,stroke:#d1d5db,stroke-width:1.5px,rx:8px,ry:8px
+    style step3 fill:#ffffff,stroke:#d1d5db,stroke-width:1.5px,rx:8px,ry:8px
+    style step4 fill:#ffffff,stroke:#d1d5db,stroke-width:1.5px,rx:8px,ry:8px
 ```
 
-1. **Input** — _what data goes in and in what format_
-2. **Preprocessing** — _cleaning, feature extraction, encoding_
-3. **Quantum core** — _the circuit, ansatz, or algorithm used_
-4. **Post-processing** — _decoding, measurement, scoring_
-5. **Output** — _what the user finally gets_
+1. **CI/CD logs and test failures** — Ingests raw build output, test traces, and failure alerts from the pipeline.
+2. **AutoCure AI agents** — Performs failure classification and generates potential candidate fixes.
+3. **Hybrid optimization layer** — Runs classical baseline algorithms alongside Qiskit-based quantum-assisted experiments to find optimal remediation paths.
+4. **Recovery recommendation and validation** — Outputs ranked remediation actions, test validation results, and status updates to the dashboard.
 
 ---
 
