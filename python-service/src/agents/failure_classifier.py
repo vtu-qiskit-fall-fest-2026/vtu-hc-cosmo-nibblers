@@ -144,17 +144,14 @@ class FailureClassifierAgent:
             framework=state.test_framework,
             iteration_context=iter_ctx,
         )
-        
         # Use centralized client
-        failures = self.client.generate_json(prompt, default_value=[])
-        
+        failures = self.client.generate_json(prompt, default_value=[])        
         if failures:
             # Basic validation that it's a list of dicts
             if isinstance(failures, list) and len(failures) > 0 and isinstance(failures[0], dict):
                 return failures
             else:
-                logger.warning(f"[FailureClassifierAgent] LLM returned invalid JSON structure: {failures}")
-        
+                logger.warning(f"[FailureClassifierAgent] LLM returned invalid JSON structure: {failures}")       
         logger.warning("[FailureClassifierAgent] LLM returned no failures (or invalid format), using regex fallback.")
         return []
 
@@ -219,12 +216,10 @@ class FailureClassifierAgent:
             if self._is_library_path(file_name):
                 continue
             # Try to extract assertion error details
-            desc = self._extract_assertion_detail(combined, file_name)
-            
+            desc = self._extract_assertion_detail(combined, file_name)            
             # Implementation-first: trace test file to implementation file
             impl_file = self._trace_test_to_impl(file_name, state)
-            target_file = impl_file if impl_file else file_name
-            
+            target_file = impl_file if impl_file else file_name            
             failures.append({
                 "file": target_file,
                 "bug_type": "LOGIC",
