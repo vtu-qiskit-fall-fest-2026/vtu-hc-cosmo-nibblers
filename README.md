@@ -60,9 +60,9 @@ Optional: add a plain list instead of the table above.
 
 ## ❓ Problem Statement
 
-<!--
+
 Modern CI/CD pipelines frequently experience build, testing, deployment, and security failures that require substantial manual effort to diagnose and resolve. Conventional AI-based approaches can identify likely root causes and suggest fixes, but selecting the most appropriate recovery action from multiple candidates remains challenging.
--->
+
 
 
 
