@@ -41,8 +41,7 @@
 
 ## 👥 Team Members (GitHub IDs)
 
-> Members are added to this repository as **collaborators** and must accept the
-> GitHub invitation before they can push. Add your GitHub username below.
+
 
 | # | Name | GitHub Username | Role |
 | :-- | :--- | :--- | :--- |
@@ -61,7 +60,7 @@ Optional: add a plain list instead of the table above.
 ## ❓ Problem Statement
 
 
-Modern CI/CD pipelines frequently experience build, testing, deployment, and security failures that require substantial manual effort to diagnose and resolve. Conventional AI-based approaches can identify likely root causes and suggest fixes, but selecting the most appropriate recovery action from multiple candidates remains challenging.
+_Modern CI/CD pipelines frequently experience build, testing, deployment, and security failures that require substantial manual effort to diagnose and resolve. Conventional AI-based approaches can identify likely root causes and suggest fixes, but selecting the most appropriate recovery action from multiple candidates remains challenging._
 
 
 
