@@ -1,3 +1,6 @@
+/*This file is entry point of backend .
+  It configures the express backend and start the server.
+*/
 import express from "express";
 import cors from "cors";
 import { runsRouter } from "./routes/runs.routes.js";
